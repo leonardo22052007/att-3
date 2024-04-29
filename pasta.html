@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Números</title>
+  <script>
+    function verificarNumeros() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+
+      var resultado = document.getElementById('resultado');
+
+      if (num1 + num2 > 100 && num1 > num2) {
+        resultado.textContent = "A soma dos números é maior que 100 e o primeiro número é maior que o segundo.";
+      } else {
+        resultado.textContent = "A soma dos números não é maior que 100 ou o primeiro número não é maior que o segundo.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Verificação de Números</h2>
+  <form>
+    <label for="num1">Digite o primeiro número:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+
+    <label for="num2">Digite o segundo número:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+
+    <button type="button" onclick="verificarNumeros()">Verificar</button>
+  </form>
+
+  <p id="resultado"></p>
+</body>
+</html>
